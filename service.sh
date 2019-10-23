@@ -18,12 +18,14 @@ if [ "$CMD" == "build" ]; then
 		cp -rL ./hyperapp/dist/ ./build/hyperapp
 	else
 		echo "Warning: Hyperapp dist missing!"
+		echo "Go to ./hyperapp & run $ npm run build"
 	fi
 
 	if [ -d "./vue/dist" ]; then
 		cp -rL ./vue/dist/ ./build/vue
 	else
 		echo "Warning: VueJS dist missing!"
+		echo "Go to ./vue & run $ npm run build"
 	fi
 
 	exit 0
