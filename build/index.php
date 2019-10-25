@@ -57,6 +57,7 @@
 			<li><a href="vanilla/">Vanilla</a></li>
 			<li><a href="backbone/">Backbone</a></li>
 			<li><a href="hyperapp/">Hyperapp</a></li>
+			<li><a href="react/">React</a></li>
 			<li><a href="vue/">Vue</a></li>
 		</ul>
 	</div>

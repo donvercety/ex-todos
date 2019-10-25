@@ -8,6 +8,7 @@ if [ "$CMD" == "build" ]; then
 		rm -r build/backbone
 		rm -r build/vanilla
 		rm -r build/hyperapp
+		rm -r build/react
 		rm -r build/vue
 	fi
 
@@ -19,6 +20,13 @@ if [ "$CMD" == "build" ]; then
 	else
 		echo "Warning: Hyperapp dist missing!"
 		echo "Go to ./hyperapp & run $ npm run build"
+	fi
+
+	if [ -d "./reactjs/build" ]; then
+		cp -rL ./reactjs/build/ ./build/react
+	else
+		echo "Warning: reactjs build missing!"
+		echo "Go to ./reactjs & run $ npm run build"
 	fi
 
 	if [ -d "./vue/dist" ]; then
@@ -34,6 +42,7 @@ elif [ "$CMD" == "build-clear" ]; then
 	rm -r build/backbone
 	rm -r build/vanilla
 	rm -r build/hyperapp
+	rm -r build/reactjs
 	rm -r build/vue
 	exit 0
 fi
